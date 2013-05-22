@@ -65,7 +65,7 @@
   response.files.append(URL('static','js/poshytip-1.0/src/tip-yellowsimple/tip-yellowsimple.css'))
   response.files.append(URL('static','css/jquery.tweet.css'))
   response.files.append(URL('static','js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css'))
-  response.files.append(URL('static','js/jquery.countdown.js'))
+  response.files.append(URL('static','js/jquery-countdown-master/js/jquery.countdown.js'))
   }}
 
   {{include 'web2py_ajax.html'}}
@@ -143,20 +143,19 @@
                                   </div>
                                  </div>
 
-                                 <div id="vv"></div>
-
                                  <script>
-                                  $(document).ready( function() {
-                                     $('#vv').load('backend/counter');
-                                  });
-                                 </script>
+                                  for (var x=new Date(); x.getDay()!=5; x.setDate(x.getDate()+1)){}
 
-                                 <script>
+                                  var myDate=new Date();
+                                  myDate.setDate(x.getDate());
+                                  alert( myDate );
+
+
                                   $('#counter').countdown({
                                    stepTime: 60,
-                                   format: 'd days hh:mm:ss',
-                                   //startTime: $('#vv').html(),
-                                   startTime: "1 DIA/S 04:19:55 Horas",
+                                   format: 'd hh:mm:ss',
+                                   //startTime: new Date("May 24, 2013 11:13:00"),
+                                   startTime: myDate,
                                    digitImages: 6,
                                    digitWidth: 53,
                                    digitHeight: 77,
