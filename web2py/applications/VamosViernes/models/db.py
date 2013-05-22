@@ -90,6 +90,8 @@ db.define_table('bar', Field('name', 'string'),
                        Field('lon', 'string'),
                        Field('address', 'string'),
                        Field('descrip','text'),
+                       Field('picture', 'upload'),
+                       Field('reco', 'boolean'),
                        format='%(name)s')
 
 db.define_table('comments', Field('uuser', db.auth_user),

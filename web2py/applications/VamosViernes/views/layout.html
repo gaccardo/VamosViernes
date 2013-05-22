@@ -174,34 +174,7 @@
                                                         <div class="panes">
 
                                                                 <!-- Posts -->
-                                                                <div>
-                                                                        <ul class="blocks-thumbs thumbs-rollover">
-                                                                                <li>
-                                                                                        <a href="single.html" class="thumb" title="An image"><img src="{{=URL('static', 'images/dummies/hookbeerciderfestival.png')}}" alt="Post" /></a>
-                                                                                        <div class="excerpt">
-                                                                                                <a href="single.html" class="header">Antares</a>
-                                                                                                am, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-                                                                                        </div>
-                                                                                        <a href="single.html" class="link-button"><span>Read more &#8594;</span></a>
-                                                                                </li>
-                                                                                <li>
-                                                                                        <iframe width="282" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ar/maps?safe=off&amp;hl=es-419&amp;ie=UTF8&amp;q=o'connells+rosario+map&amp;fb=1&amp;gl=ar&amp;hq=o'connells&amp;hnear=0x95b6539335d7d75b:0xec4086e90258a557,Rosario,+Santa+Fe&amp;cid=0,0,12660321496525820549&amp;ll=-32.938606,-60.641959&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.ar/maps?safe=off&amp;hl=es-419&amp;ie=UTF8&amp;q=o'connells+rosario+map&amp;fb=1&amp;gl=ar&amp;hq=o'connells&amp;hnear=0x95b6539335d7d75b:0xec4086e90258a557,Rosario,+Santa+Fe&amp;cid=0,0,12660321496525820549&amp;ll=-32.938606,-60.641959&amp;spn=0.006295,0.006295&amp;t=m&amp;source=embed" style="color:#0000FF;text-align:left"></a></small>
-                                                                                        <div class="excerpt">
-                                                                                                <a href="single.html" class="header">O'Connels</a>
-                                                                                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-                                                                                        </div>
-                                                                                        <a href="single.html" class="link-button"><span>Read more &#8594;</span></a>
-                                                                                </li>
-                                                                                <li>
-                                                                                        <a href="single.html" class="thumb" title="An image"><img src="{{=URL('static', 'images/dummies/282x150.gif')}}" alt="Post" /></a>
-                                                                                        <div class="excerpt">
-                                                                                                <a href="single.html" class="header">Lorem ipsum dolor</a>
-                                                                                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-                                                                                        </div>
-                                                                                        <a href="single.html" class="link-button"><span>Read more &#8594;</span></a>
-                                                                                </li>
-                                                                        </ul>
-                                                                </div>
+                                                                {{=LOAD('backend', 'bares', ajax=True)}}
                                                                 <!-- ENDS posts -->
 
                                                                 <!-- Information  -->

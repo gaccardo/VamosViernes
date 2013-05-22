@@ -37,8 +37,9 @@ response.menu = [
                  ( T('HOME'),  T('Bienvenidos'), URL('default', 'index'), [] ),
                  ( T('BARES'), T('Bares'),       URL('default', 'bares'), 
                      [
-                       ( T('Buscador'),  URL('default', 'buscador')  ),
-                       ( T('Aleatorio'), URL('default', 'aleatorio') )
+                       ( T('Buscador'),         URL('default', 'buscador')   ),
+                       ( T('Aleatorio'),        URL('default', 'aleatorio')  ),
+                       ( T('Decir a un amigo'), URL('default', 'deciramigo') )
                      ] ),
                  ( T('FOTOS'), T('Fotos de Usuarios'), URL('default', 'fotos'), [] ),
                 ]

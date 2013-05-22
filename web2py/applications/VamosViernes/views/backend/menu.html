@@ -1,0 +1,30 @@
+<!-- ENDS menu-holder -->
+ <!-- wrapper-menu -->
+ <div class="wrapper">
+  <ul id="nav" class="sf-menu">
+   {{for item in response.menu:}}
+    {{file = session.file}}
+    {{url = item[2]}}
+    {{url = url.split('/')}}
+    {{url = url[-1]}}
+    {{if file == url:}}
+     <li class="current-menu-item"><a href="{{=item[2]}}">{{=item[0]}}<span class="subheader">{{=item[1]}}</span></a>
+    {{else:}}
+     <li><a href="{{=item[2]}}">{{=item[0]}}<span class="subheader">{{=item[1]}}</span></a>
+    {{pass}}
+    {{if len(item[3]) == 0:}}
+     </li>
+    {{else:}}
+     <ul>
+     {{for subitem in item[3]:}}
+      <li><a href="{{=subitem[1]}}"><span>{{=subitem[0]}}</span></a></li>
+     {{pass}}
+     </ul>
+     </li>
+    {{pass}}
+   {{pass}}
+  </ul>
+  <!-- Navigation -->
+ </div>
+ <!-- wrapper-menu -->
+</div>
