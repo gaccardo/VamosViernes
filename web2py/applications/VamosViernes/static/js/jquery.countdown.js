@@ -37,6 +37,7 @@ jQuery.fn.countdown = function(userOptions)
           float: 'left', background: 'url(\'' + options.image + '\')',
           width: options.digitWidth});
         digits.push(elem);
+
         margin(c, -((parseInt(options.startTime[i]) * options.digitHeight *
                               options.digitImages)));
         digits[c].__max = 9;

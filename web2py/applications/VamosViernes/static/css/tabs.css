@@ -167,7 +167,7 @@ body.home .panes{
 .clock .wrapper {
         width: 450px;
         border: 1px solid;
-        padding-left: 125px;
+        padding-left: 30px;
         padding-top: 10px;
         padding-bottom: 10px;
         border-radius:3px; 
