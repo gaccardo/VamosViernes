@@ -1,0 +1,31 @@
+{{left_sidebar_enabled,right_sidebar_enabled=False,('message' in globals())}}
+{{extend 'layout.html'}}
+
+{{for bar in bares:}}
+   <h1>{{=bar['bar'].name}}</h1>
+   {{=bar['bar'].address}}<br>
+   {{=bar['bar'].descrip}}<br>
+   {{=bar['bar'].lon}}</br>
+   {{=bar['bar'].lat}}</br>
+
+   <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+    </script>
+
+   <div id="map_canvas" style="width:100%; height:100%"></div>
+
+   <ul>
+     {{for comm in bar['comments']:}}
+      <li>{{=comm.texto}}</li>
+     {{pass}}
+   </ul>
+{{pass}}
+
