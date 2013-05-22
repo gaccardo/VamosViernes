@@ -24,7 +24,7 @@
 
    <ul>
      {{for comm in bar['comments']:}}
-      <li>{{=comm.texto}}</li>
+      <li>{{=comm.comments.texto}} | {{=comm.auth_user.first_name}} {{=comm.auth_user.last_name}} | {{=comm.auth_user.email}}</li>
      {{pass}}
    </ul>
 {{pass}}
