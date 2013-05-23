@@ -178,3 +178,14 @@ body.home .panes{
         -webkit-box-shadow: 4px 4px 4px 4px #5c5c5c;
 
 }
+
+.userbox {
+	margin-bottom: 12px;
+        margin-left: 3px;
+        font-weight: bolder;
+}
+
+.userbox a:link, a:visited, a:hover {
+	text-decoration: none;
+        color: #efeded;
+}

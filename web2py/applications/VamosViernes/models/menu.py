@@ -42,4 +42,5 @@ response.menu = [
                        ( T('Decir a un amigo'), URL('default', 'deciramigo') )
                      ] ),
                  ( T('FOTOS'), T('Fotos de Usuarios'), URL('default', 'fotos'), [] ),
+                 ( T('LOGIN'), T('Ingreso para usuarios'), URL('default', 'user/login'), [] ),                 
                 ]

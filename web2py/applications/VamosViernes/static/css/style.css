@@ -327,8 +327,15 @@ h6{ font-size: 20px; }
 
 .top-search{
 	position: absolute;
-	top:47px;
+	top:26px;
 	right: 30px;
+        border: 1px solid #494949;
+        padding: 12px;
+        -moz-border-radius:13px; /* Firefox */ 
+        -webkit-border-radius:13px; /* Safari y Chrome */ 
+        box-shadow: 2px 2px 2px 2px #5c5c5c;
+        -moz-box-shadow: 4px #5c5c5c;
+        -webkit-box-shadow: 4px #5c5c5c;
 }
 
 #searchform #s{
