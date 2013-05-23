@@ -23,7 +23,8 @@ def barsingle():
    bar      = db( db.bar.name==args ).select()
    bar      = bar[0]
    comments = db( ( db.bar.id         == db.comments.bar ) &
-                  ( db.comments.uuser == db.auth_user.id)
+                  ( db.comments.uuser == db.auth_user.id ) &
+                  ( db.bar.name       == args )
                 ).select()
    count    = len( comments )
 

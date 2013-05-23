@@ -94,11 +94,6 @@
                                         <a href="index.html"><img id="logo" src="{{=URL('static','images/logo.png')}}" alt="Nova" /></a>
                                         <!-- search -->
                                         <div class="top-search">
-                                          {{if auth.user is not None:}}
-                                           <div class="userbox">
-                                            <a href="">{{=auth.user.first_name}} {{=auth.user.last_name}}</a> | <a href="">Logout</a>
-                                           </div>
-                                          {{pass}}
                                          <form  method="get" id="searchform" action="#">
                                                         <div>
                                                                 <input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
