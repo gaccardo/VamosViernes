@@ -1,6 +1,7 @@
 # coding: utf8
 
 def index(): 
+   response.flash = 'guido'
    session.file = "index"
    return dict()
 

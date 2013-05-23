@@ -34,13 +34,13 @@ DEVELOPMENT_MENU = True
 #########################################################################
 
 response.menu = [
-                 ( T('HOME'),  T('Bienvenidos'), URL('default', 'index'), [] ),
-                 ( T('BARES'), T('Bares'),       URL('default', 'bares'), 
+                 ( T('HOME'),  T('Bienvenidos'), URL('Rosario', 'index'), [] ),
+                 ( T('BARES'), T('Bares'),       URL('Rosario', 'bares'), 
                      [
-                       ( T('Buscador'),         URL('default', 'buscador')   ),
-                       ( T('Aleatorio'),        URL('default', 'aleatorio')  ),
-                       ( T('Decir a un amigo'), URL('default', 'deciramigo') )
+                       ( T('Buscador'),         URL('Rosario', 'buscador')   ),
+                       ( T('Aleatorio'),        URL('Rosario', 'aleatorio')  ),
+                       ( T('Decir a un amigo'), URL('Rosario', 'deciramigo') )
                      ] ),
-                 ( T('FOTOS'), T('Fotos de Usuarios'), URL('default', 'fotos'), [] ),
+                 ( T('FOTOS'), T('Fotos de Usuarios'), URL('Rosario', 'fotos'), [] ),
                  ( T('LOGIN'), T('Ingreso para usuarios'), URL('default', 'user/login'), [] ),                 
                 ]

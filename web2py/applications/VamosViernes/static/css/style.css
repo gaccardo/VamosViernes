@@ -333,9 +333,6 @@ h6{ font-size: 20px; }
         padding: 12px;
         -moz-border-radius:13px; /* Firefox */ 
         -webkit-border-radius:13px; /* Safari y Chrome */ 
-        box-shadow: 2px 2px 2px 2px #5c5c5c;
-        -moz-box-shadow: 4px #5c5c5c;
-        -webkit-box-shadow: 4px #5c5c5c;
 }
 
 #searchform #s{

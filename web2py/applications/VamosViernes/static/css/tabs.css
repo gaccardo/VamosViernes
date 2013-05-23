@@ -189,3 +189,47 @@ body.home .panes{
 	text-decoration: none;
         color: #efeded;
 }
+
+#content-login {
+	margin-top: 40px;
+        margin-left: 220px;
+        margin-top: 20px;
+        padding-left: 20px;
+        border: none;
+        width: 480px;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: #b1b1b1;
+        border: 1px solid;
+        border-radius:3px; 
+        -moz-border-radius:13px; /* Firefox */ 
+        -webkit-border-radius:13px; /* Safari y Chrome */ 
+        text-decoration: none;
+        color: #51565b;
+	font-family: 'Ubuntu', arial, serif;
+	font-weight: lighter;
+	line-height: 1.4em;
+
+}
+
+#content-login input {
+	display: block;
+	-webkit-margin-start: 2px;
+	-webkit-margin-end: 2px;
+	-webkit-padding-before: 0.35em;
+	-webkit-padding-start: 0.75em;
+	-webkit-padding-end: 0.75em;
+	-webkit-padding-after: 0.625em;
+	border: 2px groove threedface;
+	border-image: initial;
+	width: 200px;
+}
+
+#content-login h2 {
+	margin-left: 125px;
+}
+
+#content-login td {
+	border: 0;
+}
