@@ -19,8 +19,12 @@ def bares():
    return dict(bares=result)
 
 def barsingle():
-   args     = request.args[0]
-   bar      = db( db.bar.name==args ).select()
+
+   if len( request.args ) == 0:
+      redirect( URL('Rosario', 'index') )
+
+   args = request.args[0]
+   bar  = db( db.bar.name==args ).select()
 
    if len( bar.records ) == 0:
       redirect( URL('Rosario', 'index') )
