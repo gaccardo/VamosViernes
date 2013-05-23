@@ -1,31 +1,53 @@
-{{left_sidebar_enabled,right_sidebar_enabled=False,('message' in globals())}}
-{{extend 'layout.html'}}
+{{extend 'layout-general.html'}}
 
-{{for bar in bares:}}
-   <h1>{{=bar['bar'].name}}</h1>
-   {{=bar['bar'].address}}<br>
-   {{=bar['bar'].descrip}}<br>
-   {{=bar['bar'].lon}}</br>
-   {{=bar['bar'].lat}}</br>
+<!-- title -->
+<div id="page-title">
+ <span class="title">Bares</span>
+ <span class="subtitle">Vamos Viernes bares</span>
+</div>
+<!-- ENDS title -->
+    
+<!-- filter -->
+<ul id="portfolio-filter" class="filter">
+ <li>Filter</li>
+ <li class="selected"><a href="#" data-filter="*" > All </a></li>
+ <li><a href="#" data-filter=".pink" > Pink </a></li>
+ <li><a href="#" data-filter=".blue" > Blue </a></li>
+ <li><a href="#" data-filter=".green" > Green </a></li>
+</ul>
+<!-- ENDS filter -->
 
-   <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map_canvas"),
-            mapOptions);
-      }
-    </script>
+<!-- gallery-->
+<ul id="portfolio-list" class="gallery two-cols">
 
-   <div id="map_canvas" style="width:100%; height:100%"></div>
+ {{for bar in bares:}}
 
-   <ul>
-     {{for comm in bar['comments']:}}
-      <li>{{=comm.comments.texto}} | {{=comm.auth_user.first_name}} {{=comm.auth_user.last_name}} | {{=comm.auth_user.email}}</li>
-     {{pass}}
-   </ul>
-{{pass}}
+ <li class="pink"><h1>{{=bar['bar'].name}}</h1> <a href="{{=URL('default', 'download', args=bar['bar'].picture)}}" rel="group1" class="fancybox" title="{{=bar['bar'].name}}">
+  <img src="{{=URL('default', 'download', args=bar['bar'].picture)}}" alt="Pic"></a></li>
 
+ {{pass}}
+
+</ul>
+<!-- ENDS gallery -->
+
+<!-- pagination -->
+<div class="clear"></div>
+<ul class='pager'>
+ <li class='first-page'><a href='#'>&laquo;</a></li>
+ <li><a href='#' >&lsaquo;</a></li>
+ <li><a href='#' >2</a></li>
+ <li><a href='#' >3</a></li>
+ <li class='active'><a href='#'>4</a></li>
+ <li><a href='#' >5</a></li>
+ <li><a href='#' >6</a></li>
+ <li><a href='#' >&rsaquo;</a></li>
+ <li class='last-page'><a href='#'>&raquo;</a></li>
+</ul>
+<!-- ENDS pagination -->
+
+
+</div>
+<!-- ENDS content -->
+
+</div>
+<!-- ENDS wrapper-main -->

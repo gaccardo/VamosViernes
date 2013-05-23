@@ -36,6 +36,7 @@ def user():
         @auth.requires_permission('read','table name',record_id)
     to decorate functions that need access control
     """
+    session.file = "profile"
     return dict(form=auth())
 
 
