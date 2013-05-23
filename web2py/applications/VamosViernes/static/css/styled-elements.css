@@ -344,7 +344,7 @@ td, th{
 .warning-box{
 	color: #9F6000;
 	background-color: #FEEFB3;
-	background-image: url('../img/knobs-icons/Knob Attention.png');
+	background-image: url('../images/knobs-icons/knob-attention.png');
 }
 
 .blue-box{
@@ -440,7 +440,7 @@ td, th{
 .message-box{
 	color: #00529B;
 	background-color: #BDE5F8;
-	background-image: url('../img/knobs-icons/Knob Message.png');
+	background-image: url('../images/knobs-icons/knob-message.png');
 }
 
 .orange-box{

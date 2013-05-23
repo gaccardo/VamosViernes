@@ -329,7 +329,6 @@ h6{ font-size: 20px; }
 	position: absolute;
 	top:26px;
 	right: 30px;
-        border: 1px solid #494949;
         padding: 12px;
         -moz-border-radius:13px; /* Firefox */ 
         -webkit-border-radius:13px; /* Safari y Chrome */ 

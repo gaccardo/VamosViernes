@@ -2,15 +2,15 @@
  <ul class="blocks-thumbs thumbs-rollover">
  {{for bar in result:}}
   <li>
-   <a href="" class="thumb" title="{{=bar['bar'].name}}">
+   <a href="{{=URL('Rosario','barsingle',args=bar['bar'].name)}}" class="thumb" title="{{=bar['bar'].name}}">
     <center><img src="{{=URL('default', 'download', args=bar['bar'].picture)}}" alt="Post" /></center>
   </a>
     <div class="excerpt">
-     <a href="" class="header">{{=bar['bar'].name}}</a>
+     <a href="{{=URL('Rosario','barsingle',args=bar['bar'].name)}}" class="header">{{=bar['bar'].name}}</a>
       {{descrip=bar['bar'].descrip}}
       {{=descrip[0:240]}} <b>...</b>
     </div>
-   <a href="" class="link-button"><span>Read more &#8594;</span></a>
+   <a href="{{=URL('Rosario','barsingle',args=bar['bar'].name)}}" class="link-button"><span>Ver este bar &#8594;</span></a>
   </li>
  {{pass}}
  </ul>

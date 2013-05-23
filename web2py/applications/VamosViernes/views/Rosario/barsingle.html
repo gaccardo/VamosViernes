@@ -1,0 +1,153 @@
+{{extend 'layout-general.html'}}
+
+<!-- title -->
+<div id="page-title">
+ <span class="title">{{=bar.name}}</span>
+ <span class="subtitle">Vamos Viernes bares</span>
+</div>
+<!-- ENDS title -->
+
+<!-- Posts -->
+<div id="posts" class="single">
+    
+ <!-- post -->
+ <div class="post">
+  <h1><a href="single.html"></a></h1>
+    
+  <!-- shadow -->
+  <div class="thumb-shadow">
+
+   <!-- post-thumb -->
+   <div class="post-thumbnail">
+    <img src="{{=URL('default','download', args=bar.picture)}}"  alt="Feature image" />
+   </div>
+   <!-- ENDS post-thumb -->
+   <div>
+    <p> {{=bar.descrip}} </p>
+
+   </div>
+  </div>
+ <!-- ENDS shadow -->
+
+<!-- meta -->
+<!-- <ul class="meta">
+  <li><strong>Posted on</strong> Dec 27th 2011 </li>
+  <li><strong>By</strong> <a href="#">Ansimuz</a></li>
+  <li> <strong>Posted in</strong>
+   <div class="meta-tags">
+    <a href="#">Webdesign</a>
+    <a href="#">Code</a>
+    <a href="#">Photo</a>
+    <a href="#">Blue</a>
+    <a href="#">Computers</a>
+    <a href="#">Sites</a>
+   </div>
+  </li>
+ </ul>
+-->
+ <!-- ENDS meta -->
+
+</div>
+<!-- ENDS post -->
+
+
+<!-- Comments-Block -->
+<div id="comments-block">
+ <div class="n-comments">{{=count}}</div> <div class="n-comments-text">Comentarios</div>
+  <!-- comments list -->
+  <ul class="commentlist">
+
+   {{for comm in comments:}}
+    <li class="comment" >
+     <div  class="comment-body">
+      <div class="comment-author vcard">
+      <img alt='' src={{=URL('static','images/dummies/avatar.jpg')}} class='avatar avatar-60 photo' height='60' width='60' />
+       <cite class="fn">{{=comm['auth_user'].first_name}} {{=comm['auth_user'].last_name}}</cite><span class="says"> dice:</span>
+      </div>
+
+      <p> {{=comm['comments'].texto}} </p>
+     <div class="reply">
+      <a class='comment-reply-link' href='/archives/196?replytocom=18#respond' onclick='return addComment.moveForm("div-comment-18", "18", "respond", "196")'>{{=T('Responder')}}</a>
+     </div>
+    </div>
+   </li>
+   {{pass}}
+
+  </ul>
+  <!-- Navi -->
+  <!--<div class="comments-pagination">
+   <a class='prev page-numbers' href='http://localhost:8888/archives/586/comment-page-1#comments'>&laquo; Previous</a>
+   <a class='page-numbers' href='http://localhost:8888/archives/586/comment-page-1#comments'>1</a>
+   <span class='page-numbers current'>2</span>     
+  </div>-->
+  <!-- ENDS Navi -->
+  <!-- comments form -->
+  <div id="respond">
+   <div class="leave-comment">
+    <h2>Dejanos tu comentario sobre este bar</h2>
+
+    {{if auth.user is not None:}}
+
+    <!-- form -->
+
+     <p class="message-box"> Vas a comentar como {{=auth.user.first_name}} {{=auth.user.last_name}}  </p>
+
+     <form action="#" method="post" id="commentform">
+      <fieldset>
+       <div class="admin-form">
+        <div>
+         <label>COMMENTARIO</label>
+         <textarea  name="comment" id="comment" rows="10" tabindex="4"></textarea>
+        </div>
+        <div><input type="submit" name="submit" id="submit" tabindex="5" value="SEND" /></div>
+        <div><input type="hidden" name="comment_post_ID" value="586" /></div>
+       </div>
+       <input type='hidden' name='comment_post_ID' value='586' id='comment_post_ID' />
+       <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+      </fieldset>
+     </form>
+
+    {{else:}}
+
+      <p class="warning-box"> Para poder dejarnos tu comentario primero tenés que ingresar </p>
+
+    {{pass}}
+    <!-- ENDS form -->
+
+    </div>
+   </div>
+   <!-- ENDS comments form -->
+  </div>
+  <!-- ENDS Comments-block -->
+ </div>
+ <!-- ENDS Posts -->
+
+
+ <!-- sidebar -->
+ <ul id="sidebar">
+  <!-- init sidebar -->
+  <li>
+   <h6>Otros Bares</h6>
+   <ul>
+    <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+    <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+    <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+    <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+   </ul>
+  </li>
+
+  <li>
+   <h6>Últimos Comentarios</h6>
+    <ul>
+     <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+     <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+     <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+     <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+    </ul>
+   </li>
+   <!-- ENDS init sidebar -->
+  </ul>
+  <!-- ENDS sidebar -->
+
+ </div>
+<!-- ENDS content -->

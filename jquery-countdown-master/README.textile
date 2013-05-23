@@ -1,0 +1,11 @@
+This is a fork of http://code.google.com/p/jquery-countdown/ as the original author hasn't updated the project since 10th July 2009.
+
+Please see http://pfarmer.github.com/jquery-countdown/test.html for examples of how to setup different countdowns, documentation is coming shortly.
+
+h2. Improvements from the original code base:
+
+* startTime can be dd:hh:mm:ss or a date object.
+* Automatically detect format of startTime.
+* Zero pad numbers if needed.
+
+h2. Please add a link in the wiki to your site if you use this jQuery plugin.
