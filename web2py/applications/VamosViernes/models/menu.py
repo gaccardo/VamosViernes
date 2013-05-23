@@ -41,6 +41,26 @@ response.menu = [
                        ( T('Aleatorio'),        URL('Rosario', 'aleatorio')  ),
                        ( T('Decir a un amigo'), URL('Rosario', 'deciramigo') )
                      ] ),
+                 
                  ( T('FOTOS'), T('Fotos de Usuarios'), URL('Rosario', 'fotos'), [] ),
-                 ( T('LOGIN'), T('Ingreso para usuarios'), URL('default', 'user/login'), [] ),                 
                 ]
+
+if auth.user is None:
+   response.menu += [ ( T('LOGIN'), 
+                        T('Ingreso para usuarios'), 
+                        URL('default', 'user/login'),
+                        [] )
+                    ]
+else:
+   response.menu += [ ( T('%s %s' % ( auth.user.first_name, auth.user.last_name ) ), 
+                        T('Usuario Conectado'),
+                        URL('default', 'user/profile'),
+                        [ 
+                          ( T('Profile'), URL('default', 'user/profile') ),
+                          ( T('Recomendanos un bar'), URL('Rosario', 'recomendation') ),
+                          ( T('Logout'), URL('default', 'user/logout') ),
+                        ]
+                      )
+                    ]
+                      
+                       
