@@ -21,11 +21,16 @@ def bares():
 def barsingle():
    args     = request.args[0]
    bar      = db( db.bar.name==args ).select()
+
+   if len( bar.records ) == 0:
+      redirect( URL('Rosario', 'index') )
+
    bar      = bar[0]
    comments = db( ( db.bar.id         == db.comments.bar ) &
                   ( db.comments.uuser == db.auth_user.id ) &
                   ( db.bar.name       == args )
                 ).select()
    count    = len( comments )
+
 
    return dict(bar=bar, comments=comments, count=count)
