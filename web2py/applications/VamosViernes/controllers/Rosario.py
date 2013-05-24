@@ -36,6 +36,7 @@ def barsingle():
                   ( db.bar.name       == args )
                 ).select()
    count    = len( comments )
+   fotos    = db( db.bar.id == db.pictures.bar ).select()
 
 
-   return dict(bar=bar, comments=comments, count=count)
+   return dict(bar=bar, comments=comments, count=count, fotos=fotos)

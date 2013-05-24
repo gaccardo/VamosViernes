@@ -100,3 +100,7 @@ db.define_table('comments', Field('uuser', db.auth_user),
                             Field('bar', db.bar),
                             Field('texto', 'text'))
 
+db.define_table('pictures', Field('description', 'text'),
+                            Field('powner', db.auth_user),
+                            Field('bar', db.bar),
+                            Field('picture', 'upload'),)
