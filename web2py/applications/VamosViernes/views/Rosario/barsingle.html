@@ -39,7 +39,19 @@
      <b>{{=bar.address}}, Rosario, Argentina</b>
     </div>
 
-    
+
+    <div>
+     <br>
+     <ul class="gallery">
+      {{for foto in fotos:}}
+       <li class="pink">
+        <a href="{{=URL('default', 'download', args=foto['pictures'].picture)}}" rel="group1" class="fancybox" title="{{=foto['pictures'].description}}">
+         <img width=210 src="{{=URL('default', 'download', args=foto['pictures'].picture)}}" alt="Pic">
+        </a>
+       </li>
+      {{pass}}
+     </ul>
+    </div>
 
    </div>
 
