@@ -34,8 +34,9 @@
 
     <div>
      <div id="map">
-      <br><img src="http://maps.googleapis.com/maps/api/staticmap?center=Callao+286,+Rosario,+Santa+Fe&zoom=16&size=600x200&sensor=false&markers=size:mid%7Ccolor:0xFFFF00%7Clabel:B%7CCallao+286,+Rosario">
+      <br><img src="http://maps.googleapis.com/maps/api/staticmap?center={{=bar.address.replace(' ', '+')}},+Rosario,+Santa+Fe&zoom=16&size=600x200&sensor=false&markers=size:mid%7Ccolor:0xFFFF00%7Clabel:B%7C{{=bar.address.replace(' ', '+')}},+Rosario">
      </div>
+     <b>{{=bar.address}}, Rosario, Argentina</b>
     </div>
 
    </div>
