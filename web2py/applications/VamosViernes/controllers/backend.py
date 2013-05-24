@@ -7,6 +7,8 @@ def index(): return dict(message="hello from backend.py")
 
 def menu(): return dict()
 
+def menufooter(): return dict()
+
 def bares():
    result = list()
    bares  = db( (db.bar.id>0) & (db.bar.reco==1) ).select() 

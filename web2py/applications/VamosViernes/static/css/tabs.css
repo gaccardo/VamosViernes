@@ -176,7 +176,13 @@ body.home .panes{
         box-shadow: 4px 4px 4px 4px #5c5c5c;
         -moz-box-shadow: 4px 4px 4px 4px #5c5c5c;
         -webkit-box-shadow: 4px 4px 4px 4px #5c5c5c;
+	z-index: 10;
+	background: #2a2d30 url(../images/header-glow.png) top center no-repeat;
 
+}
+
+.clock h1 {
+	color: #efeded;
 }
 
 .userbox {
@@ -200,13 +206,14 @@ body.home .panes{
 	outline: 0;
 	font-size: 100%;
 	vertical-align: baseline;
-	background: #b1b1b1;
+	z-index: 10;
+	background: #2a2d30 url(../images/header-glow.png) top center no-repeat;
         border: 1px solid;
         border-radius:3px; 
         -moz-border-radius:13px; /* Firefox */ 
         -webkit-border-radius:13px; /* Safari y Chrome */ 
         text-decoration: none;
-        color: #51565b;
+        color: #BAC0C9;
 	font-family: 'Ubuntu', arial, serif;
 	font-weight: lighter;
 	line-height: 1.4em;
