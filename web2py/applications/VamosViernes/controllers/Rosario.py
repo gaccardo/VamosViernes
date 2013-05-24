@@ -24,6 +24,7 @@ def barsingle():
       redirect( URL('Rosario', 'index') )
 
    args = request.args[0]
+   args = args.replace('_', ' ')
    bar  = db( db.bar.name==args ).select()
 
    if len( bar.records ) == 0:
